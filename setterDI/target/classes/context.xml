@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="address" class="com.infosys.pojo.Address">
+		<property name="state" value="Goa" ></property>
+		<property name="city" value="Margao"></property>
+	</bean>
+
+	<bean id="student" class="com.infosys.pojo.Student">
+		<property name="sid" value="20" ></property>
+		<property name="name" value="DYLAN"></property>
+		<property name="addy" ref="address"></property>
+		<property name="subs">
+			<list>
+				<value>"JAVA"</value>
+				<value>"DBMS"</value>
+			</list>
+		</property>
+	</bean>
+	
+</beans>

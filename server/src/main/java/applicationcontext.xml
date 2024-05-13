@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+ <bean id="student" class="com.infosys.demo.Student">
+ <property name="sid" value="101"></property>
+ <property name="sname" value="Dylan"></property>
+ </bean>
+ 
+ <bean id="college" class="com.infosys.demo.College" autowire="byName" scope="prototype">
+ <property name="cname" value="DBIT"></property>
+ <property name="city" value="Bangalore"></property>
+ </bean>
+	
+</beans>
